@@ -34,4 +34,14 @@ public class LocatorsFile {
 	@FindBy(xpath="//span[contains(@class, 'bAq')]") public WebElement msgFromUnread;                  				 //Locate message of unread action event
 	@FindBy(xpath="(//div[contains(@class, \"J-N-Jz\")])[8]") public WebElement marlAsReadOption;       			 //Locate mark as read option in action button
 	
+	//Scenario5: Locators
+	@FindBy(xpath= "//div[contains(@class, \"z0\")]") public WebElement composeEmailButton;                             //Locate Compose option
+	@FindBy(xpath="//div[contains(@class, 'aH9')]/input") public WebElement senderEmailTextbox;                                 //Locate textbox to enter sender email
+	@FindBy(xpath="//input[contains(@class, 'aoT')]") public WebElement subjectTextbox;                                      //Locate subject textbox
+	@FindBy(xpath="//td[contains(@class, 'Ap')]/div[2]/div")public WebElement  bodyTextbox;                                                //Locate body textbox
+    @FindBy(xpath="//div[contains(@class, 'dC')]/div[1]") public WebElement sendButton;                                                 //Locate send button to send email
+    @FindBy(xpath="//div[contains(@class, 'vh') ]") public WebElement sendMessageAlert;                                    //Locate send message alert
+
+
 }
+

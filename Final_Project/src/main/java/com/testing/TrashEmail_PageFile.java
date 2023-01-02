@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
-public class TrashEmail_PageFile extends LocatorsFile implements Login_DataFile {
+public class TrashEmail_PageFile extends LocatorsFile implements DataFile {
 
 	// assign driver variable to initialize webelements
 	public WebDriver driver;
@@ -29,17 +29,18 @@ public class TrashEmail_PageFile extends LocatorsFile implements Login_DataFile 
 	// Entering valid Email & Password to login
 	public void enterEmailPassword() throws InterruptedException {
 		Thread.sleep(1000);
-		emailTextBox.sendKeys(username_013);
+		emailTextBox.sendKeys("testingproject074@gmail.com");
 		Thread.sleep(1000);
 		nextEmailButton.click();
-		passwordTextBox.sendKeys(password_013);
+		passwordTextBox.sendKeys("Test@1234");
 		Thread.sleep(1000);
 		nextPasswordButton.click();
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 	}
 
 	// Select particular one email from Inbox
 	public void selecteEmail() throws InterruptedException {
+		Thread.sleep(2000);
 		selectedEmail.click();
 		System.out.println("Is email selected: " + selectedEmail.isSelected());
 

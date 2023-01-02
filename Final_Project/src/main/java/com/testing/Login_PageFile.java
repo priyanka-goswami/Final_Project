@@ -13,7 +13,7 @@ import org.testng.Assert;
 
 import net.sourceforge.htmlunit.corejs.javascript.ast.ErrorCollector;
 
-public class Login_PageFile extends LocatorsFile implements Login_DataFile {
+public class Login_PageFile extends LocatorsFile implements DataFile {
 
 // assign driver variable to initialize webelements
 	public WebDriver driver; 
@@ -29,7 +29,7 @@ public class Login_PageFile extends LocatorsFile implements Login_DataFile {
 
 // Opening Gmail website to perform testing
 	public void openURL() {
-		driver.get(openURL);
+		driver.get("https://www.gmail.com");
 	}
 
 	// **************************** Test Cases of User Interface**************************//
@@ -64,6 +64,7 @@ public class Login_PageFile extends LocatorsFile implements Login_DataFile {
 
 //******************** TEST Cases with Excel Data*****************//
 
+		
 //Check blank email- TC005
 	public void blankEmail() throws InterruptedException {
 		Thread.sleep(1000);
